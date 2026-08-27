@@ -8,7 +8,7 @@ import org.apache.catalina.webresources.StandardRoot;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int port = 8080;
+        int port = args.length > 0 ? Integer.parseInt(args[0]) : 8080;
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(port);
         tomcat.getConnector();
